@@ -1,0 +1,736 @@
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+body{
+    margin: 0;
+    font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "Yu Mincho Light", YuMincho, "Yu Mincho", 游明朝体, sans-serif;
+    color: #000000;
+    
+}
+
+/*header*/
+.wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.big-bg{
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+#home{
+    background-image: url(images/main.png);
+    width: 100vw;
+    margin-top: 0;
+    height: 640px;
+    margin-right: calc(50% - 50vw);
+	margin-left: calc(50% - 50vw);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width:100%;
+}
+.page-header{
+    
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 139px;
+    height: 60px;
+    
+}
+.logo:hover{
+    opacity:0.5 ;
+}
+.main-nav{
+    display: flex;
+
+}
+.main-nav li{
+    margin-left:60px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    list-style: none;
+}
+.main-nav a{
+    color: black;    
+}
+.main-nav a:hover{
+    opacity: 0.5 ;
+}
+h1{
+    width: 532px;
+    height: 58px;
+    font-weight: lighter;
+    line-height: 58px;
+    font-size: 48px;
+    margin:0 530px;
+    text-align: center;
+    margin-top: 10%;
+}
+.drawer-hidden {
+    display: none;
+  }
+
+
+/*お知らせ*/
+.notice h2{
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: lighter;
+    margin: 89px 600px;
+    text-align: center;
+}
+.info span{
+    border:1px solid black;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0 39px;
+    padding: 6px;
+}
+.info li{
+    list-style: none;
+    border-bottom:2px solid black ;
+    padding-bottom: 35px;
+    margin-bottom: 64px;
+    color: #000;
+}
+.info a{
+    color: #000;
+    font-size: 18px;
+    line-height: 22px;
+}
+.info{
+    width: 700px;
+    margin: 0 400px;
+}
+.info a:hover{
+    opacity: 0.5 ;
+}
+.sp {
+    display: none;
+   }
+
+/*施工事例*/
+.container{
+    display: flex;
+    margin-left: 160px;
+}
+.build{
+    width: 430px;
+    height: 280px;
+}
+.item{
+    padding-left:110px ;
+    text-align: center;
+}
+.seko h2{
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 178px 600px 90px 600px;
+}
+h3{
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: lighter;
+    margin-top: 29px;
+    margin-bottom: 15px;
+}
+p{
+    font-size: 14px;
+    line-height: 17px;
+}
+.more{
+    height: 47px;
+}
+.more:hover{
+    opacity: 0.5;
+}
+
+.acc a{
+    text-align: center;
+    border: 1px solid black;
+    width: 120px;
+    height: 12px;
+    padding: 12px 40px;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.acc{
+    
+    margin: 80px 650px;
+}
+/*まとめ*/
+.conclusion{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    margin-top: 180px;
+    background-color: black;
+}
+.con:hover{
+    opacity: 0.5;
+}
+
+/*フッター*/
+.pg{
+    background-color: black;
+}
+.footer-nav a{
+color: white;
+}
+#foot{
+    margin: 0;
+        padding: 0;
+}
+.copyright{
+    color: white;
+    text-align: center;
+}
+.logo2{
+    width: 95px;
+    height: 40px;
+}
+.logo2:hover{
+    opacity:0.5 ;
+}
+
+@media(max-width: 600px)  {
+    /*------------------------------
+
+header
+------------------------------*/
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+ display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+ display: flex;
+ height: 60px;
+ width: 60px;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ z-index: 100;/* 重なり順を一番上に */
+ cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+ content: '';
+ display: block;
+ height: 3px;
+ width: 25px;
+ border-radius: 3px;
+ background: #333;
+ transition: 0.5s;
+ position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+ bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+ top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+ background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+ bottom: 0;
+ transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+ top: 0;
+ transform: rotate(-45deg);
+}
+ 
+/* メニューのデザイン*/
+.drawer-content {
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 100%;/* メニューを画面の外に飛ばす */
+ z-index: 99;
+ background:  rgba(2, 75, 128, 0.8);
+ transition: .5s;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+ left: 0;/* メニューを画面に入れる */
+}
+.drawer-list{
+ display: inline-block;
+}
+.main-nav a{
+ color: white;
+ font-weight: bold;
+}
+.drawer-item{
+ padding-top: 100px;
+}
+h1{
+ font-size: 1.5rem;
+ box-sizing: border-box;
+ max-width: 100%;
+ margin: initial;
+ margin-top: 140px;
+ margin-left:4% ;
+}
+
+
+/*お知らせ*/
+
+.notice h2{
+ margin: initial;
+ box-sizing: border-box;
+ max-width: 100%;
+ margin: 10% 0;
+ font-size: 24px;
+}
+.info{
+ margin: initial;
+ box-sizing: border-box;
+ max-width: 100%;
+ padding-right: 10%;
+}
+.sp {
+ display: block;
+ content: "";
+ margin: 10px 0;
+}
+.info a{
+ font-size: 15px;
+}
+
+/*施工事例*/
+.seko h2{
+ margin: initial;
+ box-sizing: border-box;
+ max-width: 100%;
+ margin: 10% 0;
+ font-size: 24px;
+ margin-top: 25%;
+}
+.container{
+ margin: initial;
+ flex-direction: column;
+ padding: initial;
+}
+.item{
+ padding: initial;
+ padding-bottom: 10%;
+}
+.acc {
+ margin: initial;
+ padding: initial;
+ margin-left:23%;
+}
+/*フッター*/
+.page-footer{
+ 
+     flex-direction: column-reverse;
+ 
+}
+
+.footer-nav a{
+   font-size: 18px;
+   line-height: 22px;
+   font-weight: lighter;
+   margin: initial;
+   margin-bottom: 30px;
+}
+.footer-nav{
+   padding: initial;
+   margin: initial;
+   display: inline-block;
+   margin-left: 20%;
+}
+.footer-nav li{
+   margin-bottom: 30px;
+   text-align: center;
+}
+.logo2{
+   margin-left: 39%;
+}
+
+
+}
+
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    h1{
+        margin: initial;
+        margin-left: 17%;
+        margin-top: 40%;
+    }
+
+      /*------------------------------
+
+header
+------------------------------*/
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+    display: none;
+   }
+   
+   /* ハンバーガーアイコンの設置スペース */
+   .drawer-open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上に */
+    cursor: pointer;
+   }
+   
+   /* ハンバーガーメニューのアイコン */
+   .drawer-open span,
+   .drawer-open span:before,
+   .drawer-open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+   }
+   
+   /* 三本線のうち一番上の棒の位置調整 */
+   .drawer-open span:before {
+    bottom: 8px;
+   }
+   
+   /* 三本線のうち一番下の棒の位置調整 */
+   .drawer-open span:after {
+    top: 8px;
+   }
+   
+   /* アイコンがクリックされたら真ん中の線を透明にする */
+   #drawer-check:checked ~ .drawer-open span {
+    background: rgba(255, 255, 255, 0);
+   }
+   
+   /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+   #drawer-check:checked ~ .drawer-open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+   }
+   
+   #drawer-check:checked ~ .drawer-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+   }
+    
+   /* メニューのデザイン*/
+   .drawer-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background:  rgba(2, 75, 128, 0.8);
+    transition: .5s;
+   }
+   
+   /* アイコンがクリックされたらメニューを表示 */
+   #drawer-check:checked ~ .drawer-content {
+    left: 0;/* メニューを画面に入れる */
+   }
+   .drawer-list{
+    display: inline-block;
+   }
+   .main-nav a{
+    color: white;
+    font-weight: bold;
+   }
+   .drawer-item{
+    padding-top: 100px;
+   }
+   /*お知らせ*/
+
+.notice h2{
+    margin: initial;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 10% 0;
+    font-size: 24px;
+   }
+   .info{
+    margin: initial;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-right: 10%;
+   }
+   .sp {
+    display: block;
+    content: "";
+    margin: 10px 0;
+   }
+   .info a{
+    font-size: 15px;
+   }
+   /*施工事例*/
+.seko h2{
+    margin: initial;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 10% 0;
+    font-size: 24px;
+    margin-top: 25%;
+   }
+   .container{
+    margin: initial;
+    flex-direction: column;
+    padding: initial;
+   }
+   .item{
+    padding: initial;
+    padding-bottom: 10%;
+   }
+   .acc {
+    margin: initial;
+    padding: initial;
+    margin-left:38%;
+   }
+   /*フッター*/
+   .page-footer{
+    
+        flex-direction: column-reverse;
+    
+   }
+   
+   .footer-nav a{
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: lighter;
+      margin: initial;
+      margin-bottom: 30px;
+   }
+   .footer-nav{
+      padding: initial;
+      margin: initial;
+      display: inline-block;
+      margin-left: 35%;
+   }
+   .footer-nav li{
+      margin-bottom: 30px;
+      text-align: center;
+   }
+   .logo2{
+      margin-left: 45%;
+   }
+   
+}
+
+
+@media (min-width: 1001px) and (max-width: 1024px){
+    h1{
+        margin: initial;
+        margin-left: 27%;
+        margin-top: 40%;
+    }
+
+      /*------------------------------
+
+header
+------------------------------*/
+
+/* チェックボックスは非表示に */
+.drawer-hidden {
+    display: none;
+   }
+   
+   /* ハンバーガーアイコンの設置スペース */
+   .drawer-open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上に */
+    cursor: pointer;
+   }
+   
+   /* ハンバーガーメニューのアイコン */
+   .drawer-open span,
+   .drawer-open span:before,
+   .drawer-open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+   }
+   
+   /* 三本線のうち一番上の棒の位置調整 */
+   .drawer-open span:before {
+    bottom: 8px;
+   }
+   
+   /* 三本線のうち一番下の棒の位置調整 */
+   .drawer-open span:after {
+    top: 8px;
+   }
+   
+   /* アイコンがクリックされたら真ん中の線を透明にする */
+   #drawer-check:checked ~ .drawer-open span {
+    background: rgba(255, 255, 255, 0);
+   }
+   
+   /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+   #drawer-check:checked ~ .drawer-open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+   }
+   
+   #drawer-check:checked ~ .drawer-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+   }
+    
+   /* メニューのデザイン*/
+   .drawer-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background:  rgba(2, 75, 128, 0.8);
+    transition: .5s;
+   }
+   
+   /* アイコンがクリックされたらメニューを表示 */
+   #drawer-check:checked ~ .drawer-content {
+    left: 0;/* メニューを画面に入れる */
+   }
+   .drawer-list{
+    display: inline-block;
+   }
+   .main-nav a{
+    color: white;
+    font-weight: bold;
+   }
+   .drawer-item{
+    padding-top: 100px;
+   }
+   /*お知らせ*/
+
+.notice h2{
+    margin: initial;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 10% 0;
+    font-size: 24px;
+   }
+   .info{
+    margin: initial;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-right: 10%;
+    margin-left: 20%;    
+}
+   .sp {
+    display: block;
+    content: "";
+    margin: 10px 0;
+   }
+   .info a{
+    font-size: 15px;
+   }
+   /*施工事例*/
+.seko h2{
+    margin: initial;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 10% 0;
+    font-size: 24px;
+    margin-top: 25%;
+   }
+   .container{
+    margin: initial;
+    flex-direction: column;
+    padding: initial;
+   }
+   .item{
+    padding: initial;
+    padding-bottom: 10%;
+   }
+   .acc {
+    margin: initial;
+    padding: initial;
+    margin-left:40%;
+    opacity: 0.5;
+   }
+   .acc a{
+    opacity: 0.5;
+   }
+   /*フッター*/
+   .page-footer{
+    
+        flex-direction: column-reverse;
+    
+   }
+   
+   .footer-nav a{
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: lighter;
+      margin: initial;
+      margin-bottom: 30px;
+   }
+   .footer-nav{
+      padding: initial;
+      margin: initial;
+      display: inline-block;
+      margin-left: 38%;
+   }
+   .footer-nav li{
+      margin-bottom: 30px;
+      text-align: center;
+   }
+   .logo2{
+      margin-left: 45%;
+   }
+   
+}
